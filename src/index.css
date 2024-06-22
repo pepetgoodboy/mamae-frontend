@@ -31,3 +31,11 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+.image-feedback {
+  background-image: url(./assets/images/hero4.png);
+}
+
+.image-auth {
+  background-image: url(./assets/images/bg-login-admin.jpg);
+}

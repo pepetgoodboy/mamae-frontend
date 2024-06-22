@@ -37,7 +37,7 @@ const LoginAdmin = () => {
 
   return (
     <div>
-      <div className="flex flex-col lg:flex-row justify-center bg-black/90 items-center min-h-screen lg:gap-20 font-nunito">
+      <div className="flex flex-col lg:flex-row justify-center image-auth bg-center bg-no-repeat bg-cover items-center min-h-screen lg:gap-20 font-nunito">
         <div className="">
           <div className="flex flex-col text-white gap-2">
             <div className="mb-5">
