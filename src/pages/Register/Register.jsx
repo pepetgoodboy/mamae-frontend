@@ -40,7 +40,7 @@ const Register = () => {
 
   return (
     <div>
-      <div className="flex flex-col lg:flex-row justify-center items-center min-h-screen bg-center bg-no-repeat bg-auth-background bg-cover lg:gap-20 font-nunito">
+      <div className="flex flex-col lg:flex-row justify-center items-center min-h-screen bg-center bg-no-repeat bg-[url('../../assets/images/bg-login-admin.jpg')] bg-cover lg:gap-20 font-nunito">
         <div className="">
           <div className="flex flex-col text-white gap-2">
             <div className="mb-5">
