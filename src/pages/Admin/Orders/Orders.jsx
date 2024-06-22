@@ -93,6 +93,12 @@ const Orders = ({ url }) => {
                           scope="col"
                           className="px-6 py-3 text-start text-xs font-bold uppercase"
                         >
+                          Phone
+                        </th>
+                        <th
+                          scope="col"
+                          className="px-6 py-3 text-start text-xs font-bold uppercase"
+                        >
                           Type
                         </th>
                         <th
@@ -128,6 +134,9 @@ const Orders = ({ url }) => {
                             {item.qty} Kg
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap text-sm ">
+                            {item.phone}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm ">
                             {item.type}
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap text-sm ">
@@ -142,7 +151,9 @@ const Orders = ({ url }) => {
                           >
                             <div className="flex gap-2 items-center cursor-pointer">
                               <FaTrashCan className="text-red-500 hover:text-red-700" />
-                              <p className="font-medium text-white">Delete</p>
+                              <p className="font-medium text-white">
+                                Delete & Mark as Done
+                              </p>
                             </div>
                           </td>
                         </tr>

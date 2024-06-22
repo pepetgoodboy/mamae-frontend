@@ -89,7 +89,7 @@ const Navbar = () => {
         unmountOnExit
       >
         <nav
-          className={`absolute right-2 top-4 w-[300px] bg-black border border-purple-500 shadow-lg px-6 py-6 space-y-6 rounded-lg ${
+          className={`absolute right-2 top-4 w-[300px] bg-[#0c0c0c] border border-neutral-700 shadow-lg px-6 py-6 space-y-6 rounded-lg ${
             open ? "block" : "hidden"
           }`}
         >
