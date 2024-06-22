@@ -118,7 +118,6 @@ const Service = ({ url }) => {
                               <img
                                 src={`${url}/images/` + item.image}
                                 alt="List Service"
-                                loading="lazy"
                                 className="w-14 md:w-16 rounded-md"
                               />
                             </td>
