@@ -37,6 +37,7 @@ const Contact = () => {
         <img
           src={Call}
           alt="call"
+          loading="lazy"
           className="max-w-xs lg:max-w-[390px] xl:max-w-lg mx-auto rounded-xl border border-purple-500 shadow-lg shadow-purple-500/50"
         />
       </div>

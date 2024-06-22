@@ -20,7 +20,12 @@ const NotFound = () => {
         data-aos="fade-up"
       >
         <p className="text-white text-3xl lea font-semibold">Page Not Found</p>
-        <img src={Error} alt="error" className="max-w-sm lg:max-w-md" />
+        <img
+          src={Error}
+          alt="error"
+          loading="lazy"
+          className="max-w-sm lg:max-w-md"
+        />
       </div>
     </div>
   );

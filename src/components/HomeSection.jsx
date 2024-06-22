@@ -57,6 +57,7 @@ const HomeSection = () => {
           <img
             src={Hero1}
             alt="hero1"
+            loading="lazy"
             className="w-80 rounded-lg border-2 border-purple-500 shadow-lg shadow-purple-500/50"
           />
         </div>
@@ -81,6 +82,7 @@ const HomeSection = () => {
           <img
             src={Hero2}
             alt="hero2"
+            loading="lazy"
             className="rounded-lg border-2 border-purple-500 shadow-lg shadow-purple-500/50"
           />
         </div>
@@ -93,6 +95,7 @@ const HomeSection = () => {
           <img
             src={Hero3}
             alt="hero3"
+            loading="lazy"
             className="rounded-lg border-2 border-purple-500 shadow-lg shadow-purple-500/50"
           />
         </div>

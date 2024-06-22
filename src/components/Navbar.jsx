@@ -30,7 +30,7 @@ const Navbar = () => {
         <div className="px-6 md:px-16 lg:px-24 py-4">
           <div className="flex justify-between py-2 ">
             <div>
-              <img src={logo} alt="logo" width={150} />
+              <img src={logo} alt="logo" loading="lazy" width={150} />
             </div>
             <div className="py-2 hidden lg:block">
               <ul className="flex gap-8 font-outfit text-white font-medium text-sm">

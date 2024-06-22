@@ -82,6 +82,8 @@ const Add = ({ url }) => {
               <label htmlFor="image">
                 <img
                   src={image ? URL.createObjectURL(image) : uploadImage}
+                  alt="upload image"
+                  loading="lazy"
                   className="w-64 md:w-40 cursor-pointer border border-slate-500 rounded-md"
                 />
               </label>

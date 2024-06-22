@@ -106,7 +106,8 @@ const Service = ({ url }) => {
                           <td className="px-6 py-4 whitespace-nowrap text-sm font-medium ">
                             <img
                               src={`${url}/images/` + item.image}
-                              alt=""
+                              alt="List Service"
+                              loading="lazy"
                               className="w-14 md:w-16 rounded-md"
                             />
                           </td>

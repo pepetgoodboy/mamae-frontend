@@ -56,6 +56,7 @@ const Services = ({ url }) => {
             <img
               src={Hero5}
               alt="hero"
+              loading="lazy"
               className="max-w-xs md:max-w-sm rounded-lg border-2 border-purple-500 shadow-lg shadow-purple-500/50"
             />
             <div
@@ -120,6 +121,7 @@ const Services = ({ url }) => {
               <img
                 src={`${url}/images/${service.image}`}
                 alt={service.name}
+                loading="lazy"
                 className="w-full h-48 object-cover"
               />
               <div className="p-4">

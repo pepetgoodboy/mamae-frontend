@@ -132,6 +132,7 @@ const PlaceOrder = ({ url }) => {
           <img
             src={`${url}/images/${serviceImage}`}
             alt={serviceName}
+            loading="lazy"
             className="max-w-md md:max-w-sm lg:max-w-[390px] xl:max-w-lg rounded-xl border border-purple-500"
             data-aos="fade-right"
           />

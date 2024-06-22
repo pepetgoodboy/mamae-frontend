@@ -26,7 +26,7 @@ const SidebarAdmin = () => {
       <div className="bg-[#0c0c0c] w-72 hidden md:block min-h-screen">
         <div className="px-5 py-8">
           <div className="flex flex-col text-[#b2b2b2]">
-            <img src={logo} className="w-1/2" alt="logo" />
+            <img src={logo} className="w-1/2" loading="lazy" alt="logo" />
             <p className="ml-[10px]">Admin Panel</p>
           </div>
           <div className="flex flex-col py-8 gap-5">
