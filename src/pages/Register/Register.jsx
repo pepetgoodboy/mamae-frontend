@@ -2,7 +2,7 @@ import Logo from "../../assets/images/logo.png";
 import { FaFacebook, FaTwitter } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const Register = () => {
@@ -108,12 +108,12 @@ const Register = () => {
             </form>
             <p className="text-white text-sm flex justify-center lg:mt-4">
               Sudah memiliki akun, Login
-              <a
-                href="/login"
+              <Link
+                to="/login"
                 className="text-orange-400 cursor-pointer hover:text-orange-500"
               >
                 &nbsp;Sekarang!
-              </a>
+              </Link>
             </p>
             <div className="flex lg:hidden justify-center items-center gap-5 mt-4">
               <FaFacebook className="w-7 h-7 text-white" />

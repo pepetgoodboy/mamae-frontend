@@ -8,7 +8,7 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/solid";
 import { CSSTransition } from "react-transition-group";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CgMenuLeftAlt, CgClose } from "react-icons/cg";
 
 const Navbar = () => {
@@ -34,15 +34,15 @@ const Navbar = () => {
             </div>
             <div className="py-2 hidden lg:block">
               <ul className="flex gap-8 font-outfit text-white font-medium text-sm">
-                <a href="/" className="hover:font-bold cursor-pointer">
+                <Link to="/" className="hover:font-bold cursor-pointer">
                   Home
-                </a>
-                <a href="/services" className="hover:font-bold cursor-pointer">
+                </Link>
+                <Link to="/services" className="hover:font-bold cursor-pointer">
                   Services
-                </a>
-                <a href="/contact" className="hover:font-bold cursor-pointer">
+                </Link>
+                <Link to="/contact" className="hover:font-bold cursor-pointer">
                   Contact Us
-                </a>
+                </Link>
               </ul>
             </div>
             <div className="hidden lg:flex gap-10">
@@ -59,11 +59,11 @@ const Navbar = () => {
                     Logout
                   </button>
                 ) : (
-                  <a href="/login">
+                  <Link to="/login">
                     <button className="w-full flex justify-center items-center py-2 px-10 bg-orange-500 hover:bg-orange-600 rounded-2xl text-white">
                       Login
                     </button>
-                  </a>
+                  </Link>
                 )}
               </div>
             </div>
@@ -94,32 +94,32 @@ const Navbar = () => {
           }`}
         >
           <div className="flex items-center justify-between">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="block px-2 py-1 text-white font-medium hover:font-bold font-outfit"
               onClick={toggleMenu}
             >
               Home
-            </a>
+            </Link>
             <CgClose
               onClick={toggleMenu}
               className="w-10 h-10 px-2 py-2 text-white cursor-pointer"
             />
           </div>
-          <a
-            href="/services"
+          <Link
+            to="/services"
             className="block px-2 py-1 text-white font-medium hover:font-bold font-outfit"
             onClick={toggleMenu}
           >
             Services
-          </a>
-          <a
-            href="/contact"
+          </Link>
+          <Link
+            to="/contact"
             className="block px-2 py-1 text-white font-medium hover:font-bold font-outfit"
             onClick={toggleMenu}
           >
             Contact Us
-          </a>
+          </Link>
           <div>
             {token ? (
               <button
@@ -129,11 +129,11 @@ const Navbar = () => {
                 Logout
               </button>
             ) : (
-              <a href="/login">
+              <Link to="/login">
                 <button className="flex justify-center items-center py-2 px-10 rounded-3xl bg-orange-500 hover:bg-orange-600 text-white">
                   Login
                 </button>
-              </a>
+              </Link>
             )}
           </div>
         </nav>

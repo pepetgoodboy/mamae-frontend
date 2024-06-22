@@ -15,13 +15,13 @@ const Footer = () => {
             <div className="flex flex-col md:justify-normal justify-center items-center md:items-start text-white gap-4">
               <h3 className="font-medium">Direct Link</h3>
               <div className="flex md:flex-col justify-center md:justify-normal items-center md:items-start gap-14 md:gap-1 text-white text-sm">
-                <Link to={"/"} className="hover:underline">
+                <Link to="/" className="hover:underline">
                   Home
                 </Link>
-                <Link to={"/services"} className="hover:underline">
+                <Link to="/services" className="hover:underline">
                   Service
                 </Link>
-                <Link to={"/contact"} className="hover:underline">
+                <Link to="/contact" className="hover:underline">
                   Contact
                 </Link>
               </div>
