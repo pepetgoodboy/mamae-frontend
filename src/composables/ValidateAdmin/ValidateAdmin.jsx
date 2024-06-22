@@ -5,7 +5,7 @@ const ValidateAdmin = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem("tokenAdmin");
     if (!token) {
       navigate("/admin");
     }

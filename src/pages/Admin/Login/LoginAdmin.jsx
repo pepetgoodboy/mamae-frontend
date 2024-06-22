@@ -26,7 +26,7 @@ const LoginAdmin = () => {
         setEmail("");
         setPassword("");
       } else {
-        localStorage.setItem("token", response.data.token);
+        localStorage.setItem("tokenAdmin", response.data.token);
         setError("");
         navigate("/admin/add");
       }
