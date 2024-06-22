@@ -44,12 +44,7 @@ const Register = () => {
         <div className="">
           <div className="flex flex-col text-white gap-2">
             <div className="mb-5">
-              <img
-                src={Logo}
-                alt="logo"
-                loading="lazy"
-                className="w-40 lg:w-32"
-              />
+              <img src={Logo} alt="logo" className="w-40 lg:w-32" />
             </div>
             <h1 className="text-4xl lg:text-5xl font-semibold flex justify-center mb-4">
               Hi, Felas!

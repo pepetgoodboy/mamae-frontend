@@ -71,7 +71,7 @@ const Add = ({ url }) => {
       <div className="flex flex-col md:flex-row">
         {/* <SidebarAdmin /> */}
         <SidebarAdmin />
-        <div className="px-10 md:px-20 py-8 font-nunito bg-[#111111] w-full text-[#b2b2b2]">
+        <div className="px-10 md:px-20 py-8 font-nunito bg-[#111111] w-full min-h-screen text-[#b2b2b2]">
           <h2 className="text-white font-medium text-2xl mb-3">Add Service</h2>
           <form
             onSubmit={onSubmitHandler}
