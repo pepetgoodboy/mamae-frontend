@@ -1,18 +1,22 @@
 import Logo from "../../assets/images/logo.png";
 import { FaFacebook, FaTwitter } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import Spinner from "react-spinner-material";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [pageLoading, setPageLoading] = useState(true);
   const navigate = useNavigate();
 
   async function handleLogin(e) {
     e.preventDefault();
+    setLoading(true);
     try {
       const response = await axios.post(
         "https://backend-mamae-production.up.railway.app/api/user/login",
@@ -32,11 +36,24 @@ const Login = () => {
       }
     } catch (error) {
       setError(error.response.data.message);
+    } finally {
+      setLoading(false);
     }
   }
 
+  useEffect(() => {
+    setTimeout(() => {
+      setPageLoading(false);
+    }, 1000);
+  }, []);
+
   return (
     <div>
+      {pageLoading && (
+        <div className="absolute inset-0 flex justify-center items-center bg-[#111111] z-50">
+          <Spinner radius={30} color={"#ffffff"} stroke={3} visible={true} />
+        </div>
+      )}
       <div className="flex flex-col lg:flex-row justify-center items-center min-h-screen image-auth bg-center bg-no-repeat bg-cover lg:gap-20 font-nunito">
         <div className="">
           <div className="flex flex-col text-white gap-2">
@@ -89,9 +106,19 @@ const Login = () => {
               <div className="flex lg:mt-4">
                 <button
                   type="submit"
+                  disabled={loading}
                   className="w-full flex justify-center items-center py-2 rounded-md bg-orange-500 hover:bg-orange-600 text-white"
                 >
-                  Masuk
+                  {loading ? (
+                    <Spinner
+                      radius={20}
+                      color={"#ffffff"}
+                      stroke={2}
+                      visible={true}
+                    />
+                  ) : (
+                    "Masuk"
+                  )}
                 </button>
               </div>
             </form>

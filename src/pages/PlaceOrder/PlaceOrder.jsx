@@ -151,7 +151,7 @@ const PlaceOrder = ({ url }) => {
                   id="namaPemesan"
                   type="text"
                   required
-                  placeholder="Fahmi"
+                  placeholder="Nama"
                   className="border border-purple-500 rounded-lg px-4 py-2 text-[#b2b2b2] bg-zinc-950 max-w-md md:max-w-sm lg:max-w-[390px] xl:max-w-lg"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -173,7 +173,7 @@ const PlaceOrder = ({ url }) => {
                   type="number"
                   min="11"
                   required
-                  placeholder="085811221321"
+                  placeholder="0857********"
                   className="border border-purple-500 rounded-lg px-4 py-2 text-[#b2b2b2] bg-zinc-950 max-w-md md:max-w-sm lg:max-w-[390px] xl:max-w-lg"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
