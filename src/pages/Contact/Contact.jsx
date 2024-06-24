@@ -2,8 +2,10 @@ import Call from "../../assets/images/call.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-
+import { Link } from "react-router-dom";
 const Contact = () => {
+  const linkWa = "https://wa.me/6281931707184";
+
   useEffect(() => {
     Aos.init({
       offset: 200,
@@ -26,9 +28,11 @@ const Contact = () => {
           memiliki pertanyaan, umpan balik, atau membutuhkan bantuan, jangan
           ragu untuk menghubungi kami melalui salah satu metode di bawah ini.
         </p>
-        <button className="px-8 py-4 lg:px-6 lg:py-2 text-lg lg:text-base bg-orange-500 hover:bg-orange-600 text-white rounded-full font-medium mt-10">
-          Kirim Pesan
-        </button>
+        <Link to={linkWa}>
+          <button className="px-8 py-4 lg:px-6 lg:py-2 text-lg lg:text-base bg-orange-500 hover:bg-orange-600 text-white rounded-full font-medium mt-10">
+            Kirim Pesan
+          </button>
+        </Link>
       </div>
       <div
         className="w-full md:items-center lg:w-[45%] pt-14 lg:pt-0"
