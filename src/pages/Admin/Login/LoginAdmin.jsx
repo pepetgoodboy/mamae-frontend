@@ -58,10 +58,11 @@ const LoginAdmin = () => {
       <div className="flex flex-col lg:flex-row justify-center image-auth bg-center bg-no-repeat bg-cover items-center min-h-screen lg:gap-20 font-plus-jakarta-sans">
         <div className="">
           <div className="flex flex-col text-tertiary gap-2">
-            <div className="mb-5">
-              <img src={Logo} alt="Logo" className="w-40 lg:w-32" />
+            <div className="mb-5 flex items-center">
+              <img src={Logo} alt="logo" className="w-16 lg:w-24" />
+              <p className="text-black font-bold text-2xl lg:text-3xl">amae</p>
             </div>
-            <h1 className="text-4xl lg:text-5xl text-black font-semibold flex justify-center mb-4">
+            <h1 className="text-2xl lg:text-3xl text-black font-semibold flex justify-center mb-4">
               Hi, Felas!
             </h1>
             <div className="hidden lg:block lg:mt-6">
