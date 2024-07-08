@@ -12,11 +12,11 @@ const FeedBack = () => {
   }, []);
 
   return (
-    <section className="pt-16 font-nunito">
-      <div className="image-feedback bg-cover bg-center bg-no-repeat w-full h-auto border-t-4 border-b-4 border-purple-500 shadow-md shadow-purple-500/50">
+    <section className="pt-16 font-plus-jakarta-sans bg-white">
+      <div className="image-feedback bg-cover bg-center bg-no-repeat w-full h-auto border-t-4 border-b-4 border-primary shadow-md shadow-primary/50">
         <div className="px-12 md:px-24 lg:px-48 xl:px-64 py-12 flex flex-col gap-8">
           <div
-            className="w-72 h-auto px-6 py-4 bg-white rounded-lg"
+            className="w-72 h-auto px-6 py-4 bg-white rounded-lg border border-neutral-200"
             data-aos="fade-right"
           >
             <p className="text-sm">
@@ -31,7 +31,7 @@ const FeedBack = () => {
             </div>
           </div>
           <div className="flex justify-end" data-aos="fade-left">
-            <div className="w-72 h-auto px-6 py-4 bg-white rounded-lg">
+            <div className="w-72 h-auto px-6 py-4 bg-white rounded-lg border border-neutral-200">
               <p className="text-sm">
                 Saya sangat puas dengan layanan laundry dari Mamae Laundry.
                 Pakaian saya selalu bersih dan rapi setiap kali diambil.
@@ -46,7 +46,7 @@ const FeedBack = () => {
             </div>
           </div>
           <div
-            className="w-72 h-auto px-6 py-4 bg-white rounded-lg"
+            className="w-72 h-auto px-6 py-4 bg-white rounded-lg border border-neutral-200"
             data-aos="fade-right"
           >
             <p className="text-sm">

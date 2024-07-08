@@ -42,7 +42,7 @@ const User = ({ url }) => {
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "dark",
+          theme: "light",
           transition: Bounce,
         });
       } else {
@@ -55,7 +55,7 @@ const User = ({ url }) => {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "dark",
+            theme: "light",
             transition: Bounce,
           };
       }
@@ -73,8 +73,8 @@ const User = ({ url }) => {
       <ToastContainer />
       <div className="flex flex-col md:flex-row">
         <SidebarAdmin />
-        <div className="flex flex-col w-full min-h-screen gap-4 px-10 md:px-20 py-8 font-nunito bg-[#111111] text-[#b2b2b2]">
-          <p className="text-white font-medium text-2xl mb-3">Manage Users</p>
+        <div className="flex flex-col w-full min-h-screen gap-4 px-10 md:px-20 py-8 font-plus-jakarta-sans bg-[#f8f8f8] text-[#b2b2b2]">
+          <p className="text-black font-semibold text-2xl mb-3">Manage Users</p>
           <div className="flex flex-col">
             <div className="-m-1.5 overflow-auto">
               <div className="p-1.5 min-w-full inline-block align-middle">
@@ -82,47 +82,47 @@ const User = ({ url }) => {
                   <div className="absolute inset-0 flex justify-center items-center">
                     <Spinner
                       radius={30}
-                      color={"#ffffff"}
+                      color={"#3B68FF"}
                       stroke={3}
                       visible={true}
                     />
                   </div>
                 ) : (
-                  <div className="border border-neutral-700 rounded-lg overflow-auto">
-                    <table className="min-w-full divide-y divide-neutral-700">
-                      <thead className="bg-black/30">
-                        <tr>
+                  <div className="border border-neutral-200 rounded-lg overflow-auto">
+                    <table className="min-w-full divide-y divide-neutral-200">
+                      <thead className="bg-primary">
+                        <tr className="text-white">
                           <th
                             scope="col"
-                            className="px-6 py-3 text-start text-xs font-bold uppercase"
+                            className="px-6 py-3 text-start text-sm"
                           >
-                            Id
+                            No
                           </th>
                           <th
                             scope="col"
-                            className="px-6 py-3 text-start text-xs font-bold uppercase"
+                            className="px-6 py-3 text-start text-sm"
                           >
                             Name
                           </th>
                           <th
                             scope="col"
-                            className="px-6 py-3 text-start text-xs font-bold uppercase"
+                            className="px-6 py-3 text-start text-sm"
                           >
                             Email
                           </th>
                           <th
                             scope="col"
-                            className="px-6 py-3 text-start text-xs font-bold uppercase"
+                            className="px-6 py-3 text-start text-sm"
                           >
                             Action
                           </th>
                         </tr>
                       </thead>
-                      <tbody className="divide-y divide-neutral-700">
+                      <tbody className="divide-y divide-neutral-200 bg-white">
                         {users.map((item, index) => (
-                          <tr key={index}>
-                            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium ">
-                              {item._id}
+                          <tr key={index} className="font-medium">
+                            <td className="px-6 py-4 whitespace-nowrap text-sm">
+                              {index + 1}
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap text-sm ">
                               {item.name}
@@ -136,7 +136,7 @@ const User = ({ url }) => {
                             >
                               <div className="flex gap-2 items-center cursor-pointer">
                                 <FaTrashCan className="text-red-500 hover:text-red-700" />
-                                <p className="font-medium text-white">Delete</p>
+                                <p className="font-medium">Delete</p>
                               </div>
                             </td>
                           </tr>

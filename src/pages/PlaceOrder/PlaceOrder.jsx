@@ -65,7 +65,7 @@ const PlaceOrder = ({ url }) => {
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "dark",
+          theme: "light",
           transition: Bounce,
         });
         await navigate("/services");
@@ -78,7 +78,7 @@ const PlaceOrder = ({ url }) => {
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "dark",
+          theme: "light",
           transition: Bounce,
         });
       }
@@ -92,7 +92,7 @@ const PlaceOrder = ({ url }) => {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "dark",
+        theme: "light",
         transition: Bounce,
       });
     }
@@ -122,18 +122,18 @@ const PlaceOrder = ({ url }) => {
 
   return (
     <div>
-      <div className="w-full h-full bg-black pb-28">
+      <div className="w-full h-full bg-white pb-28">
         <div className="flex justify-center py-10">
-          <h2 className="text-white font-outfit font-semibold text-3xl">
+          <h2 className="text-black font-plus-jakarta-sans font-semibold text-3xl">
             Place Order
           </h2>
         </div>
-        <div className="flex flex-col md:items-center md:justify-center md:flex-row gap-4 md:gap-8 lg:gap-20 px-24 text-white font-outfit">
+        <div className="flex flex-col md:items-center md:justify-center md:flex-row gap-4 md:gap-8 lg:gap-20 px-24 text-tertiary font-plus-jakarta-sans">
           <img
             src={`${url}/images/${serviceImage}`}
             alt={serviceName}
             loading="lazy"
-            className="max-w-md md:max-w-sm lg:max-w-[390px] xl:max-w-lg rounded-xl border border-purple-500"
+            className="max-w-md md:max-w-sm lg:max-w-[390px] xl:max-w-lg rounded-xl border border-neutral-200"
             data-aos="fade-right"
           />
           <div className="flex flex-col gap-7" data-aos="fade-left">
@@ -152,7 +152,7 @@ const PlaceOrder = ({ url }) => {
                   type="text"
                   required
                   placeholder="Nama"
-                  className="border border-purple-500 rounded-lg px-4 py-2 text-[#b2b2b2] bg-zinc-950 max-w-md md:max-w-sm lg:max-w-[390px] xl:max-w-lg"
+                  className="border border-neutral-200 rounded-lg px-4 py-2 text-[#b2b2b2] bg-white max-w-md md:max-w-sm lg:max-w-[390px] xl:max-w-lg"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
@@ -163,7 +163,7 @@ const PlaceOrder = ({ url }) => {
                   min="1"
                   required
                   placeholder="4"
-                  className="border border-purple-500 rounded-lg px-4 py-2 text-[#b2b2b2] bg-zinc-950 max-w-md md:max-w-sm lg:max-w-[390px] xl:max-w-lg"
+                  className="border border-neutral-200 rounded-lg px-4 py-2 text-[#b2b2b2] bg-white max-w-md md:max-w-sm lg:max-w-[390px] xl:max-w-lg"
                   value={orderQuantity}
                   onChange={(e) => setOrderQuantity(e.target.value)}
                 />
@@ -174,7 +174,7 @@ const PlaceOrder = ({ url }) => {
                   min="11"
                   required
                   placeholder="0857********"
-                  className="border border-purple-500 rounded-lg px-4 py-2 text-[#b2b2b2] bg-zinc-950 max-w-md md:max-w-sm lg:max-w-[390px] xl:max-w-lg"
+                  className="border border-neutral-200 rounded-lg px-4 py-2 text-[#b2b2b2] bg-white max-w-md md:max-w-sm lg:max-w-[390px] xl:max-w-lg"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                 />
@@ -193,7 +193,7 @@ const PlaceOrder = ({ url }) => {
                       setType("Super Express");
                     }
                   }}
-                  className="border border-purple-500 rounded-lg px-4 py-2 text-[#b2b2b2] bg-zinc-950 max-w-md md:max-w-sm lg:max-w-[390px] xl:max-w-lg"
+                  className="border border-neutral-200 rounded-lg px-4 py-2 text-[#b2b2b2] bg-white max-w-md md:max-w-sm lg:max-w-[390px] xl:max-w-lg"
                 >
                   <option disabled>Pilih</option>
                   <option value="Reguler">Reguler</option>
@@ -206,7 +206,7 @@ const PlaceOrder = ({ url }) => {
                   value={method}
                   required
                   onChange={(e) => setMethod(e.target.value)}
-                  className="border border-purple-500 rounded-lg px-4 py-2 text-[#b2b2b2] bg-zinc-950 max-w-md md:max-w-sm lg:max-w-[390px] xl:max-w-lg"
+                  className="border border-neutral-200 rounded-lg px-4 py-2 text-[#b2b2b2] bg-white max-w-md md:max-w-sm lg:max-w-[390px] xl:max-w-lg"
                 >
                   <option disabled>Pilih</option>
                   <option value="COD">Cash On Delivery</option>
@@ -216,7 +216,7 @@ const PlaceOrder = ({ url }) => {
                   <p>Total Pesanan : Rp. {totalPesanan} </p>
                   <button
                     type="submit"
-                    className="text-white mt-4 max-w-md md:max-w-sm lg:max-w-[390px] xl:max-w-lg flex justify-center items-center py-2 px-6 rounded-3xl bg-orange-500 hover:bg-orange-600 border border-slate-500"
+                    className="text-white mt-4 max-w-md md:max-w-sm lg:max-w-[390px] xl:max-w-lg flex justify-center items-center py-2 px-6 rounded-lg bg-primary hover:bg-blue-600"
                   >
                     Pesan Sekarang
                   </button>

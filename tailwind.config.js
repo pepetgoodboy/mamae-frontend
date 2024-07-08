@@ -10,6 +10,12 @@ export default {
       fontFamily: {
         outfit: ["Outfit", "sans-serif"],
         nunito: ["Nunito", "sans-serif"],
+        "plus-jakarta-sans": ["Plus Jakarta Sans", "sans-serif"],
+      },
+      colors: {
+        primary: "#3B68FF",
+        secondary: "#141957",
+        tertiary: "#595959",
       },
     },
   },

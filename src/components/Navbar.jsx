@@ -26,41 +26,47 @@ const Navbar = () => {
   };
   return (
     <header className="w-full sticky top-0">
-      <nav className="w-full h-[78px] bg-black">
+      <nav className="w-full h-[78px] bg-white">
         <div className="px-6 md:px-16 lg:px-24 py-4">
           <div className="flex justify-between py-2 ">
-            <div>
-              <img src={logo} alt="logo" width={150} />
+            <div className="flex items-center font-plus-jakarta-sans font-bold text-black/85 text-3xl">
+              <img src={logo} alt="logo" className="w-14" />
+              <p>amae</p>
             </div>
             <div className="py-2 hidden lg:block">
-              <ul className="flex gap-8 font-outfit text-white font-medium text-sm">
-                <Link to="/" className="hover:font-bold cursor-pointer">
+              <ul className="flex gap-8 font-plus-jakarta-sans font-semibold text-sm text-tertiary">
+                <Link to="/" className="cursor-pointer hover:text-primary">
                   Home
                 </Link>
-                <Link to="/services" className="hover:font-bold cursor-pointer">
+                <Link
+                  to="/services"
+                  className="cursor-pointer hover:text-primary"
+                >
                   Services
                 </Link>
-                <Link to="/contact" className="hover:font-bold cursor-pointer">
+                <Link to="/about" className="cursor-pointer hover:text-primary">
+                  About
+                </Link>
+                <Link
+                  to="/contact"
+                  className="cursor-pointer hover:text-primary"
+                >
                   Contact Us
                 </Link>
               </ul>
             </div>
             <div className="hidden lg:flex gap-10">
-              {/* <div className="flex gap-4">
-                <MagnifyingGlassIcon className="w-10 h-10 px-2 py-2 text-white bg-orange-500 hover:bg-orange-600 cursor-pointer rounded-full" />
-                <ShoppingCartIcon className="w-10 h-10 px-2 py-2 text-white bg-orange-500 hover:bg-orange-600 cursor-pointer rounded-full" />
-              </div> */}
-              <div>
+              <div className="font-plus-jakarta-sans">
                 {token ? (
                   <button
                     onClick={handleLogout}
-                    className="w-full flex justify-center items-center py-2 px-10 rounded-2xl bg-orange-500 hover:bg-orange-600 text-white"
+                    className="w-full flex justify-center items-center py-2 px-10 rounded-lg bg-primary hover:bg-blue-600 text-white"
                   >
                     Logout
                   </button>
                 ) : (
                   <Link to="/login">
-                    <button className="w-full flex justify-center items-center py-2 px-10 bg-orange-500 hover:bg-orange-600 rounded-2xl text-white">
+                    <button className="w-full flex justify-center items-center py-2 px-10 bg-primary hover:bg-blue-600 rounded-lg text-white">
                       Login
                     </button>
                   </Link>
@@ -68,10 +74,9 @@ const Navbar = () => {
               </div>
             </div>
             <div className="flex gap-4 lg:hidden">
-              {/* <ShoppingCartIcon className="w-10 h-10 px-2 py-2 text-white bg-orange-500 hover:bg-orange-600 cursor-pointer rounded-full" /> */}
               <CgMenuLeftAlt
                 onClick={toggleMenu}
-                className="w-10 h-10 px-2 py-2 text-white cursor-pointer"
+                className="w-10 h-10 px-2 py-2 text-black/85 cursor-pointer"
               />
             </div>
           </div>
@@ -89,48 +94,55 @@ const Navbar = () => {
         unmountOnExit
       >
         <nav
-          className={`absolute right-2 top-4 w-[300px] bg-[#0c0c0c] border border-neutral-700 shadow-lg px-6 py-6 space-y-6 rounded-lg ${
+          className={`absolute right-2 top-4 w-[300px] bg-white border border-neutral-400 shadow-lg px-6 py-6 space-y-6 rounded-lg ${
             open ? "block" : "hidden"
           }`}
         >
           <div className="flex items-center justify-between">
             <Link
               to="/"
-              className="block px-2 py-1 text-white font-medium hover:font-bold font-outfit"
+              className="block px-2 py-1 text-tertiary font-semibold hover:text-primary font-plus-jakarta-sans"
               onClick={toggleMenu}
             >
               Home
             </Link>
             <CgClose
               onClick={toggleMenu}
-              className="w-10 h-10 px-2 py-2 text-white cursor-pointer"
+              className="w-10 h-10 px-2 py-2 text-black/85 cursor-pointer"
             />
           </div>
           <Link
             to="/services"
-            className="block px-2 py-1 text-white font-medium hover:font-bold font-outfit"
+            className="block px-2 py-1 text-tertiary font-semibold hover:text-primary font-plus-jakarta-sans"
             onClick={toggleMenu}
           >
             Services
           </Link>
           <Link
+            to="/about"
+            className="block px-2 py-1 text-tertiary font-semibold hover:text-primary font-plus-jakarta-sans"
+            onClick={toggleMenu}
+          >
+            About
+          </Link>
+          <Link
             to="/contact"
-            className="block px-2 py-1 text-white font-medium hover:font-bold font-outfit"
+            className="block px-2 py-1 text-tertiary font-semibold hover:text-primary font-plus-jakarta-sans"
             onClick={toggleMenu}
           >
             Contact Us
           </Link>
-          <div>
+          <div className="font-plus-jakarta-sans">
             {token ? (
               <button
                 onClick={handleLogout}
-                className="flex justify-center items-center py-2 px-10 rounded-2xl bg-orange-500 hover:bg-orange-600 text-white"
+                className="flex justify-center items-center py-2 px-10 rounded-lg bg-primary hover:bg-blue-600 text-white"
               >
                 Logout
               </button>
             ) : (
               <Link to="/login">
-                <button className="flex justify-center items-center py-2 px-10 rounded-3xl bg-orange-500 hover:bg-orange-600 text-white">
+                <button className="flex justify-center items-center py-2 px-10 rounded-lg bg-primary hover:bg-blue-600 text-white">
                   Login
                 </button>
               </Link>

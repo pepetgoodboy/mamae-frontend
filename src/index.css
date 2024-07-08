@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -33,9 +34,9 @@ input::-webkit-inner-spin-button {
 }
 
 .image-feedback {
-  background-image: url(./assets/images/hero4.png);
+  background-image: url(./assets/images/home1.png);
 }
 
 .image-auth {
-  background-image: url(./assets/images/bg-login-admin.jpg);
+  background-image: url(./assets/images/bg-login.jpg);
 }

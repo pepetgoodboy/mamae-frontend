@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
-import uploadImage from "../../../assets/images/upload-image.png";
-import axios from "axios";
+import uploadImage from "../../../assets/images/upload.png";
 import { Bounce, toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -58,7 +57,7 @@ const Add = ({ url }) => {
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "dark",
+          theme: "light",
           transition: Bounce,
         });
       } else {
@@ -70,7 +69,7 @@ const Add = ({ url }) => {
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "dark",
+          theme: "light",
           transition: Bounce,
         });
       }
@@ -83,7 +82,7 @@ const Add = ({ url }) => {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "dark",
+        theme: "light",
         transition: Bounce,
       });
     } finally {
@@ -94,15 +93,17 @@ const Add = ({ url }) => {
   return (
     <div className="flex flex-col md:flex-row">
       <SidebarAdmin />
-      <div className="w-full px-10 md:px-20 py-8 font-nunito bg-[#111111] min-h-screen text-[#b2b2b2]">
+      <div className="w-full px-10 md:px-20 py-8 font-plus-jakarta-sans bg-[#f8f8f8] min-h-screen text-tertiary">
         <ToastContainer />
         <div>
-          <h2 className="text-white font-medium text-2xl mb-3">Add Service</h2>
+          <h2 className="text-black font-semibold text-2xl mb-3">
+            Add Service
+          </h2>
           {pageLoading ? (
             <div className="absolute inset-0 flex justify-center min-h-screen items-center">
               <Spinner
                 radius={30}
-                color={"#FFFFFF"}
+                color={"#3B68FF"}
                 stroke={2}
                 visible={true}
               />
@@ -114,13 +115,13 @@ const Add = ({ url }) => {
                 className="flex flex-col gap-5 text-sm justify-center items-center md:justify-normal md:items-start"
               >
                 <div className="flex flex-col gap-4">
-                  <p>Upload Image</p>
+                  <p className="font-medium">Upload Image</p>
                   <label htmlFor="image">
                     <img
                       src={image ? URL.createObjectURL(image) : uploadImage}
                       alt="upload image"
                       loading="lazy"
-                      className="w-64 md:w-40 cursor-pointer border border-slate-500 rounded-md"
+                      className="w-64 md:w-40 cursor-pointer border border-neutral-200 rounded-md"
                     />
                   </label>
                   <input
@@ -132,18 +133,18 @@ const Add = ({ url }) => {
                   />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <p>Service Name</p>
+                  <p className="font-medium">Service Name</p>
                   <input
                     onChange={onChangeHandler}
                     value={data.name}
                     type="text"
                     name="name"
                     placeholder="Type here"
-                    className="border border-slate-500 rounded-md px-2 py-1 w-64 md:w-96 bg-[#111111]"
+                    className="border border-neutral-200 rounded-md px-2 py-1 w-64 md:w-96 bg-white"
                   />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <p>Service Description</p>
+                  <p className="font-medium">Service Description</p>
                   <textarea
                     onChange={onChangeHandler}
                     value={data.description}
@@ -151,24 +152,24 @@ const Add = ({ url }) => {
                     rows="4"
                     placeholder="Write description here"
                     required
-                    className="border border-slate-500 rounded-md px-2 py-1 w-64 md:w-96 bg-[#111111]"
+                    className="border border-neutral-200 rounded-md px-2 py-1 w-64 md:w-96 bg-white"
                   ></textarea>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <p>Service Price</p>
+                  <p className="font-medium">Service Price</p>
                   <input
                     onChange={onChangeHandler}
                     value={data.price}
                     type="number"
                     name="price"
                     placeholder="Rp 10.000"
-                    className="border border-slate-500 rounded-md px-2 py-1 w-64 md:w-96 bg-[#111111]"
+                    className="border border-neutral-200 rounded-md px-2 py-1 w-64 md:w-96 bg-white"
                   />
                 </div>
                 <button
                   type="submit"
                   disabled={loading}
-                  className="bg-purple-500 hover:bg-purple-600 text-white px-5 py-1 rounded-md max-w-64 md:max-w-sm disabled:bg-purple-300 disabled:cursor-not-allowed"
+                  className="bg-primary hover:bg-blue-600 text-white px-5 py-1 rounded-md max-w-64 md:max-w-sm  disabled:cursor-not-allowed"
                 >
                   {loading ? (
                     <Spinner

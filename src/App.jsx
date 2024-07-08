@@ -12,6 +12,7 @@ import Service from "./pages/Admin/Service/Service";
 import Orders from "./pages/Admin/Orders/Orders";
 import User from "./pages/Admin/User/User";
 import NotFound from "./pages/NotFound/NotFound";
+import About from "./pages/About/About";
 
 const App = () => {
   const url = "https://backend-mamae-production.up.railway.app";
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/services" element={<Services url={url} />} />
+          <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/order/:id" element={<PlaceOrder url={url} />} />
         </Route>

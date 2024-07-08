@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-[#131d32] h-[350px] py-8 lg:py-14 font-outfit">
+      <footer className="bg-primary h-[350px] py-8 lg:py-14 font-outfit">
         <div className="flex flex-col md:flex-row md:justify-between gap-14 md:px-24 lg:px-32">
           <div className="flex flex-col md:flex-row gap-10 lg:gap-20">
             <div className="flex flex-col md:justify-normal justify-center items-center md:items-start text-white gap-4">
@@ -47,7 +47,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="px-8 md:px-24 lg:px-32 py-2 mt-6 md:mt-36 lg:mt-32">
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-neutral-200">
             &copy; Copyright 2024. All Rights Reserved.
           </p>
         </div>
