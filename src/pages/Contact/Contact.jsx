@@ -28,7 +28,7 @@ const Contact = () => {
           memiliki pertanyaan, umpan balik, atau membutuhkan bantuan, jangan
           ragu untuk menghubungi kami melalui salah satu metode di bawah ini.
         </p>
-        <Link to={linkWa}>
+        <Link to={linkWa} target="_blank">
           <button className="px-6 py-2 text-lg lg:text-base bg-primary hover:bg-blue-600 text-white rounded-lg mt-6">
             Kirim Pesan
           </button>

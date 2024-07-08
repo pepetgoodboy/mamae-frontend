@@ -4,6 +4,7 @@ import Hero7 from "../../assets/images/biaya.png";
 import Hero8 from "../../assets/images/delivery.png";
 import Hero9 from "../../assets/images/about.png";
 import { IoIosArrowForward } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -76,10 +77,13 @@ const About = () => {
               pelanggan. Dengan memperhatikan kualitas laundry kami yang efektif
               dan efisien
             </p>
-            <button className="flex items-center gap-2 justify-center bg-white border border-primary text-primary font-bold py-2 px-4 rounded-lg w-48">
+            <Link
+              to="/services"
+              className="flex items-center gap-2 justify-center bg-white border border-primary text-primary font-bold py-2 px-4 rounded-lg w-48"
+            >
               <p>Pesan Sekarang</p>
               <IoIosArrowForward className="text-primary" />
-            </button>
+            </Link>
           </div>
         </div>
         <div className="flex flex-col lg:flex-row px-10 md:px-20 py-16 lg:py-0 gap-16 md:gap-10">
@@ -95,10 +99,13 @@ const About = () => {
               pesanan. Ini berarti kami hanya mengenakan biaya ketika layanan
               laundry Anda sudah dikonfirmasi
             </p>
-            <button className="flex items-center gap-2 justify-center bg-white border border-primary text-primary font-bold py-2 px-4 rounded-lg w-48">
+            <Link
+              to="/services"
+              className="flex items-center gap-2 justify-center bg-white border border-primary text-primary font-bold py-2 px-4 rounded-lg w-48"
+            >
               <p>Pesan Sekarang</p>
               <IoIosArrowForward className="text-primary" />
-            </button>
+            </Link>
           </div>
           <div className="items-center w-full lg:w-[45%]" data-aos="fade-left">
             <img src={Hero7} alt="hero" loading="lazy" />
@@ -119,10 +126,13 @@ const About = () => {
               Kami menyediakan layanan gratis pengiriman berdasarkan jarak
               tempuh pengiriman ke tujuanmu sesuai cabang Mamae Laundry
             </p>
-            <button className="flex items-center gap-2 justify-center bg-white border border-primary text-primary font-bold py-2 px-4 rounded-lg w-48">
+            <Link
+              to="/services"
+              className="flex items-center gap-2 justify-center bg-white border border-primary text-primary font-bold py-2 px-4 rounded-lg w-48"
+            >
               <p>Pesan Sekarang</p>
               <IoIosArrowForward className="text-primary" />
-            </button>
+            </Link>
           </div>
         </div>
         <div className="flex flex-col lg:flex-row px-10 md:px-20 py-16 lg:py-0 gap-16 md:gap-10">
@@ -138,10 +148,13 @@ const About = () => {
               pengalaman yang baik sehingga dapat memberikan pelayanan yang
               profesional dan hasil yang berkualitas
             </p>
-            <button className="flex items-center gap-2 justify-center bg-white border border-primary text-primary font-bold py-2 px-4 rounded-lg w-48">
+            <Link
+              to="/services"
+              className="flex items-center gap-2 justify-center bg-white border border-primary text-primary font-bold py-2 px-4 rounded-lg w-48"
+            >
               <p>Pesan Sekarang</p>
               <IoIosArrowForward className="text-primary" />
-            </button>
+            </Link>
           </div>
           <div className="items-center w-full lg:w-[45%]" data-aos="fade-left">
             <img src={Hero5} alt="hero" loading="lazy" />
