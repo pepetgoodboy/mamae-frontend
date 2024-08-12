@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import ValidateAdmin from "../../../composables/ValidateAdmin/ValidateAdmin";
 import SidebarAdmin from "../../../components/SidebarAdmin";
 import Spinner from "react-spinner-material";
+import axios from "axios";
 
 const Add = ({ url }) => {
   ValidateAdmin();
