@@ -20,7 +20,7 @@ const Login = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        "https://yappy-sadella-curhatin-57043035.koyeb.app//api/user/login",
+        "https://yappy-sadella-curhatin-57043035.koyeb.app/api/user/login",
         {
           email,
           password,
