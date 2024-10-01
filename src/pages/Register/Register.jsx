@@ -21,7 +21,7 @@ const Register = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        "https://yappy-sadella-curhatin-57043035.koyeb.app//api/user/register",
+        "https://yappy-sadella-curhatin-57043035.koyeb.app/api/user/register",
         {
           name,
           email,
